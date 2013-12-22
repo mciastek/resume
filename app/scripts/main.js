@@ -68,6 +68,47 @@ $(document).ready(function() {
 
 	});
 
+	// add .tab-wrap ids to array
+	var tabWrapIds = [];
+		for(var i=0; i < $tabWrap.length; i++) {
+			tabWrapIds.push($tabWrap.eq(i).attr("id"));
+	}
+
+	var move = 0;
+	// navigate via up&down arrow keys
+	$(window).keydown(function(event) {
+		var code;
+		// check for type of keycode
+		if(event.keyCode) {
+			code = event.keyCode;
+		} else {
+			code = event.which;
+		}
+		if(code == 38) {
+			event.preventDefault();
+				// if move is less than zero stop
+				if(move <= 0) {
+					return move;
+				} else {
+					move--;
+				}
+			scrollTo("#"+tabWrapIds[move]);
+			
+		}
+
+		if(code == 40) {
+			event.preventDefault();
+				// if move is higher than tabWarpIds length stop
+				if(move >= (tabWrapIds.length - 1)) {
+					return move;
+				} else {
+					move++;	
+				}
+			scrollTo("#"+tabWrapIds[move]);
+			
+		}
+	});
+
 
 
 	function chartInit() {
