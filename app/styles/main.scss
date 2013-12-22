@@ -4,9 +4,13 @@
 * COLORS
 */
 
+// gray
 $lGray: #ccc;
 $dGray: #424242;
+
+//red
 $redOrange: #e6311c;
+$brownOrange: #A62314;
 
 /* 
 * ADDITIONAL RESET
@@ -105,7 +109,7 @@ body {
         display: inline-block;
         max-width: 30em;
         text-align: justify;
-        h1 {
+        > hgroup > h1 {
             color: $redOrange;
             font-weight: 700;
             text-transform: uppercase;
@@ -113,6 +117,70 @@ body {
         }
     }
 }
+
+/*
+* EXPERIENCE
+*/
+
+#exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    opacity: 0;
+    margin-bottom: 0.67em
+  }
+  .exp-date {
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    span {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  .no-year .exp-date {
+    padding-left: 46px;
+  }
+  .exp-circle {
+    width: 16px;
+    height: 16px;
+    margin: 7px 0;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: $redOrange;
+  }
+
+  .exp-year {
+    color: $lGray;
+  }
+
+  .exp-month {
+    text-decoration: underline;
+    color: $lGray;
+  }
+
+  hgroup > h1 {
+    color: $redOrange;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  .exp-desc {
+    padding-left: 72px;
+     article a {
+      color: $redOrange;
+      text-decoration: underline;
+      &:hover {
+        color: $brownOrange;
+      }
+     }
+  }
+
+}
+
+
 
 
 /* 
