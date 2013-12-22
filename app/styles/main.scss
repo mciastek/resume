@@ -181,6 +181,146 @@ body {
 }
 
 
+/*
+* SKILLS
+*/
+
+#code-skills, #design-skills {
+  hgroup > h1 {
+    color: $dGray;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: underline;
+    margin-bottom: 25px;
+  }
+
+  .skill-row {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .skill-wrap {
+    margin-right: 20px;
+    width: 100px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    &.last {
+      margin-right: 0;
+    }
+
+
+    .skill-label, .skill-level, .skill-desc {
+      width: 100px;
+      height: 26px;
+    }
+
+    .skill-label {
+      position: relative;
+      height: 26px;
+      //text-align: center;
+      // 3d
+      perspective: 1000px;
+      
+
+      .skill-flip {
+        transform-origin: 100% 13px;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+      }
+
+      
+
+      .skill-level, .skill-desc {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+      }
+
+      .skill-level {
+        z-index: 2;
+      }
+
+      .skill-desc {
+        transform: rotateX(180deg);
+        background: $redOrange;
+        color: #fff;
+      }
+      
+    }
+
+    &:hover {
+      &:hover .skill-flip {
+        transform: rotateX(-180deg);
+      }
+    }
+
+    .tech-logo {
+      width: 46px;
+      height: 46px;
+      position: absolute;
+      top: 27px;
+      left: 27px;
+    }
+  }
+}
+
+// tech logos
+#html-5 {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: -46px -46px;
+}
+
+#css-3 {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: 0 -92px;
+}
+
+#js {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: -46px -92px;
+}
+
+#php {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: 0 -138px;
+}
+
+#wordpress {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: -46px -138px;
+}
+
+#yeoman {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: 0 -184px;
+}
+
+#grunt {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: -46px -184px;
+}
+
+#photoshop {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: 0 0;
+}
+
+#illustrator {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: -46px 0;
+}
+
+#indesign {
+  background: url('https://www.dropbox.com/s/wvmfy4szk3ysy4n/tech-logos.png?dl=1') no-repeat;
+  background-position: 0 -46px;
+}
+
+
 
 
 /* 
@@ -190,12 +330,13 @@ body {
 .chart {
   position: relative;
   display: inline-block;
-  width: 110px;
-  height: 110px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 100px;
+  height: 100px;
   text-align: center;
+  margin-bottom: 20px;
 }
+
+
 .chart canvas {
   position: absolute;
   top: 0;

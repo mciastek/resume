@@ -144,6 +144,7 @@ $(document).ready(function() {
 	function chartInit() {
     //create instance
 	    $('.chart').easyPieChart({
+	    	size: 100,
 	    	animate: 2000,
 	    	barColor: '#e6311c',
 	    	trackColor: false,
