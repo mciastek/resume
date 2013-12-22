@@ -29,12 +29,14 @@ body {
     font: 16px/1.65em "Lato", sans-serif;
     font-weight: normal;
     color: $dGray;
+    position: relative;
 }
 
 // navigation
 
 #main-nav {
     position: fixed;
+    z-index: 99;
     top: 50%;
     left: 10px;
     margin-top: -60px;
@@ -51,7 +53,7 @@ body {
             position: relative;
             margin-bottom: 10px;
             .dot-item {
-              position: relative;
+              position: absolute;
               margin: 0;
               border-radius: 50%;
               background: $lGray;
@@ -103,17 +105,25 @@ body {
 // tabs with content
 .tab-wrap {
     display: table-cell;
+    position: relative;
     text-align: center;
     vertical-align: middle;
     .tab-content {
         display: inline-block;
-        max-width: 30em;
+        max-width: 32em;
         text-align: justify;
         > hgroup > h1 {
             color: $redOrange;
             font-weight: 700;
             text-transform: uppercase;
             font-size: 3em;
+        }
+        p a {
+          color: $redOrange;
+          text-decoration: underline;
+          &:hover {
+            color: $brownOrange;
+          }
         }
     }
 }
@@ -186,18 +196,35 @@ body {
 */
 
 #code-skills, #design-skills {
+  position: relative;
+  border-left: 30px solid $lGray;
+  padding-left: 20px;
+  hgroup {
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin:    0 0;
+    -ms-transform-origin:     0 0;
+    -o-transform-origin:      0 0;
+    
+    -webkit-transform: rotate(90deg); 
+    -moz-transform:    rotate(90deg); 
+    -ms-transform:     rotate(90deg); 
+    -o-transform:      rotate(90deg); 
+  }
   hgroup > h1 {
-    color: $dGray;
+    color: #fff;
     font-size: 1em;
     font-weight: 400;
-    text-decoration: underline;
-    margin-bottom: 25px;
+    margin: 0;
   }
 
   .skill-row {
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-top: 30px;
   }
 
   .skill-wrap {
@@ -333,7 +360,7 @@ body {
   width: 100px;
   height: 100px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
@@ -351,36 +378,6 @@ body {
   content: '%';
   margin-left: 0.1em;
   font-size: .8em;
-}
-.angular {
-  margin-top: 100px;
-}
-.angular .chart {
-  margin-top: 0;
-}
-input {
-  display: block;
-  margin: auto;
-  margin-bottom: 3em;
-}
-.btn {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background: #2c3e50;
-  color: #ecf0f1;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 0.8em;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.btn:hover {
-  background: #e67e22;
-  color: #2c3e50;
 }
 @media only screen and (max-width: 600px) {
   li {
@@ -405,4 +402,162 @@ input {
   a.active:after {
     display: none;
   }
+}
+
+/*
+* CONTACT
+*/
+
+.social-wrap {
+  position: relative;
+  width: 100%;
+  p {
+    padding-top: 30px;
+    text-align: center;
+  }
+  .social-icons {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 30px;
+    overflow: hidden;
+  }
+}
+
+#logo-wrap {
+  width: 100%;
+  height: 80px;
+  border-bottom: 10px solid $redOrange;
+  padding-bottom: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+#logo {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  background: url('https://www.dropbox.com/s/qvysrasmqu2kdj0/logo.png?dl=1') no-repeat;
+  // position: absolute;
+  // bottom: 30px;
+  // left: 50%;
+  // margin-left: -75px;
+}
+
+// font-icons
+
+@font-face {
+  font-family: 'fontello';
+  src: url('https://www.dropbox.com/s/refd8vhgnttc13w/fontello.eot?dl=1');
+  src: url('https://www.dropbox.com/s/refd8vhgnttc13w/fontello.eot?dl=1#iefix') format('embedded-opentype'),
+       url('https://www.dropbox.com/s/xqdz4cuw0ez6b8m/fontello.woff?dl=1') format('woff'),
+       url('https://www.dropbox.com/s/20i4grh9tvb1srs/fontello.ttf?dl=1') format('truetype'),
+       url('https://www.dropbox.com/s/5ru6uy16uvc38rp/fontello.svg?dl=1#fontello') format('svg');
+       // https://www.dropbox.com/s/refd8vhgnttc13w/fontello.eot
+       // https://www.dropbox.com/s/5ru6uy16uvc38rp/fontello.svg
+       // https://www.dropbox.com/s/20i4grh9tvb1srs/fontello.ttf
+       // https://www.dropbox.com/s/xqdz4cuw0ez6b8m/fontello.woff
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?47683662#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"], [class*=" icon-"] {
+ &:before {
+  font-family: "fontello";
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  color: $lGray;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 2em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+}
+&:hover:before {
+  color: $redOrange;
+}
+}
+ 
+.icon-github-circled:before { content: '\e800'; } /* '' */
+.icon-twitter-circled:before { content: '\e803'; } /* '' */
+.icon-facebook-circled:before { content: '\e802'; } /* '' */
+.icon-gplus-circled:before { content: '\e801'; } /* '' */
+.icon-linkedin-circled:before { content: '\e805'; } /* '' */
+.icon-behance:before { content: '\e804'; } /* '' */
+
+// firefox icon font fix
+@-moz-document url-prefix() {
+  [class^="icon-"], [class*=" icon-"] {
+    &:before {
+      content: '';
+      width: 0;
+    }
+    display: inline-block;
+    float: left;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 24px;
+    background: url('https://www.dropbox.com/s/n7mik6bp4da4m96/social-icons.png?dl=1') no-repeat;
+  }
+.icon-github-circled { 
+  background-position: -128px 0;
+  &:hover {
+    background-position: -128px -32px;
+  }
+} 
+.icon-twitter-circled { background-position: -32px 0; 
+&:hover {
+    background-position: -32px -32px;
+  }
+} 
+.icon-facebook-circled { background-position: 0 0;  
+  &:hover {
+    background-position: 0 -32px;
+  }
+} 
+.icon-linkedin-circled { background-position: -64px 0; 
+  &:hover {
+    background-position: -64px -32px;
+  }
+}
+.icon-behance { background-position: -96px 0; 
+  &:hover {
+    background-position: -96px -32px;
+  }
+}
+
 }

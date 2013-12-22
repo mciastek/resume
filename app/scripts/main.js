@@ -83,6 +83,15 @@ $(document).ready(function() {
 						move = 2;
 						}
 						break;
+
+						case 'contact': {
+						move = 3;
+						}
+						break;
+
+						default:
+						return false;
+						break;
 					}
 				}
 			});
@@ -145,7 +154,7 @@ $(document).ready(function() {
     //create instance
 	    $('.chart').easyPieChart({
 	    	size: 100,
-	    	animate: 2000,
+	    	animate: 1000,
 	    	barColor: '#e6311c',
 	    	trackColor: false,
 	    	scaleColor: false,

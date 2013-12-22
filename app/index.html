@@ -14,12 +14,42 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <script type="text/javascript">
+        // check if user is contected to network
+     //    var el = document.body;
+     //    if ('onLine' in navigator) {
+     //        if(navigator.onLine) {
+     //            alert('Conected');
+     //        } else {
+     //            alert('Not conected');
+     //        }
+            
+     //    }
+     //    else if (el.addEventListener) {
+     //     el.addEventListener("online", function () {
+     //       alert("online");}, true);
+     //     el.addEventListener("offline", function () {
+     //       alert("offline");}, true);
+     // }
+     // else if (el.attachEvent) {
+     //     el.attachEvent("ononline", function () {
+     //       alert("online");});
+     //     el.attachEvent("onoffline", function () {
+     //       alert("offline");});
+     // }
+     // else {
+     //     el.ononline = function () {
+     //       alert("online");};
+     //       el.onoffline = function () {
+     //           alert("offline");};
+     //       }
+        </script>
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <!--[if lt IE 10]>
+        <!--[if lt IE 9]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
@@ -30,8 +60,7 @@
             <li><div class="dot-item active"><a href="#hello">1</a></div></li>
             <li><div class="dot-item"><a href="#exp">2</a></div></li>
             <li><div class="dot-item"><a href="#skills">3</a></div></li>
-            <li><div class="dot-item"><a href="#">4</a></div></li>
-            <li><div class="dot-item"><a href="#">5</a></div></li>
+            <li><div class="dot-item"><a href="#contact">4</a></div></li>
         </ul>
     </nav>
 
@@ -241,6 +270,37 @@
                 <style type="text/css">.skill-desc { display: none; }</style>
                 <![endif]-->   
         </section>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="clearfix">
+        <section class="tab-wrap" id="contact">
+            <article class="tab-content">
+                <hgroup>
+                    <h1>Contact me</h1>
+                </hgroup>
+                <p>
+                    If you want 'say hello' just send me an email: <a href="maito:miroslaw.ciastek@gmail.com">miroslaw.ciastek@gmail.com</a>
+                    
+                    <div class="social-wrap">
+                        <p>Or find me on:</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/miroslaw.ciastek" target="_blank" title="facebook"><i class="icon-facebook-circled"></i></a>
+                            <a href="https://twitter.com/mciastek" target="_blank" title="twitter"><i class="icon-twitter-circled"></i></a> 
+                            <!-- <a href="#" target="_blank" title="Google+"><i class="icon-gplus-circled"></i></a> -->
+                            <a href="http://www.linkedin.com/pub/miros%C5%82aw-ciastek/60/567/9b6" target="_blank" title="LinkedIn"><i class="icon-linkedin-circled"></i></a>
+                            <a href="https://www.behance.net/mciastek" target="_blank" title="Behance"><i class="icon-behance"></i></a>
+                            <a href="https://github.com/mciastek" target="_blank" title="Github"><i class="icon-github-circled"></i></a>
+
+                        </div>
+                    </div>
+                </p>
+            </article>
+           <footer id="logo-wrap">
+                <div id="logo"></div>
+           </footer> 
+        </section>
+
     </div>
 
 
