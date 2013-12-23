@@ -32,6 +32,11 @@ body {
     position: relative;
 }
 
+strong {
+  font-weight: normal;
+  color: $redOrange;
+}
+
 #fade-wrap {
   display: none;
 }
@@ -85,7 +90,7 @@ body {
               // typo
               text-align: center;
 
-                a {
+                span {
                     display: none;
                 }
 
@@ -96,7 +101,7 @@ body {
                     margin: -3px;
                 }
 
-                &:hover > a {
+                &:hover > span {
                     line-height: 10px;
                     font-size: 9px;
                     color: #fff;
@@ -144,6 +149,30 @@ body {
     }
 }
 
+//key navigation info
+
+#key-nav-wrap {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 90;
+  text-align: center;
+  span {
+    display: block;
+    line-height: 0.625em;
+    font-size: 0.625em;
+  }
+}
+
+#key-nav {
+  display: inline-block;
+  width: 84px;
+  height: 56px;
+  background: url('https://www.dropbox.com/s/1bdaz3wkijim9a0/arrow-nav.png?dl=1') no-repeat top left;
+
+ 
+}
+
 /*
 * EXPERIENCE
 */
@@ -157,8 +186,9 @@ body {
     margin-bottom: 0.67em
   }
   .exp-date {
+    float: left;
     height: 30px;
-    width: 100%;
+    // width: 100%;
     line-height: 30px;
     span {
       float: left;
@@ -179,11 +209,7 @@ body {
 
   .exp-year {
     color: $lGray;
-  }
-
-  .exp-month {
-    text-decoration: underline;
-    color: $lGray;
+    text-align: right;
   }
 
   hgroup > h1 {
@@ -195,6 +221,9 @@ body {
 
   .exp-desc {
     padding-left: 72px;
+    article p {
+      margin-top: 0;
+    }
      article a {
       color: $redOrange;
       text-decoration: underline;

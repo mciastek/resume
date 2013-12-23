@@ -33,12 +33,18 @@
     <!-- MAIN NAVIGATION -->
     <nav id="main-nav">
         <ul>
-            <li><div class="dot-item active"><a href="#hello">1</a></div></li>
-            <li><div class="dot-item"><a href="#exp">2</a></div></li>
-            <li><div class="dot-item"><a href="#skills">3</a></div></li>
-            <li><div class="dot-item"><a href="#contact">4</a></div></li>
+            <li><a class="dot-item active" href="#hello"><span>1</span></a></li>
+            <li><a class="dot-item" href="#exp"><span>2</span></a></li>
+            <li><a class="dot-item" href="#skills"><span>3</span></a></li>
+            <li><a class="dot-item" href="#contact"><span>4</span></a></li>
         </ul>
     </nav>
+
+    <!-- KEYBOARD NAV INFO -->
+    <div id="key-nav-wrap">
+        <div id="key-nav"></div>
+        <span>Keyboard navigation</span>
+    </div>
 
     <!-- HELLO -->
     <div class="clearfix">
@@ -48,7 +54,7 @@
                     <h1>Hello!</h1>
                 </hgroup>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus scelerisque sapien, vel molestie sem. Curabitur interdum ornare lorem. Proin convallis purus ac enim eleifend faucibus. Donec in dictum ipsum, tincidunt lobortis lectus. Nulla placerat lorem quis consectetur ultricies. Morbi tincidunt risus mi, gravida sodales risus accumsan et. Integer elit justo, faucibus a pellentesque ut, vehicula mattis neque. Sed a lorem a mauris auctor suscipit. Curabitur in augue aliquet, convallis libero et, vulputate nisi. Etiam aliquet, est nec faucibus adipiscing, ligula enim adipiscing mi, sed dignissim tortor massa non sapien. Pellentesque magna lacus, venenatis nec odio vitae, consectetur lacinia urna. Curabitur a massa lobortis, pharetra quam ac, pulvinar odio.
+                    My name is <strong>Mirosław Ciastek</strong>. I'm a self-taught <strong>web designer</strong> and <strong>front-end developer</strong> with passion to seek new ways of making web more user-friendly. This simple resume presents my latest work and my still growing skills, which helps me design and develop better websites. Feel free to contact me!
                 </p>
             </article>
             
@@ -64,33 +70,48 @@
                     <h1>Experience</h1>
                 </hgroup>
                     <ul id="exp-list">
-                        <li><div class="exp-date"><span class="exp-year">2013</span><span class="exp-circle"></span><span class="exp-month">August - December</span></div>
+                        <li><div class="exp-date"><span class="exp-year">2013</span><span class="exp-circle"></span></div>
                             <section class="exp-desc">
                                 <hgroup>
                                     <h1>Millward Brown</h1>
                                 </hgroup>
                                 <article>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus scelerisque sapien, vel molestie sem. Curabitur interdum ornare lorem. Proin convallis purus ac enim eleifend faucibus.
+                                    <p>Preferencje Polityczne – website presents results of Millward Brown's political surveys (soon online)<br/>
+                                    <strong>Design:</strong> [Photoshop, Illustrator]</p>
+                                    <p>IBIS – one of Millward Brown's most used online survey<br/>
+                                    <strong>Code:</strong> [HTML, CSS, JS],
+                                    <strong>Design:</strong> [Photoshop]
+                                    </p>
                                 </article>
                             </section>
                         </li>
-                        <li class="no-year"><div class="exp-date"><span class="exp-circle"></span><span class="exp-month">February</span></div>
+                        <li class="no-year"><div class="exp-date"><span class="exp-circle"></span></div>
                             <section class="exp-desc">
                                 <hgroup>
                                     <h1>Na Straży Sondaży</h1>
                                 </hgroup>
                                 <article>
-                                    Design & coding - <a href="http://nastrazysondazy.uw.edu.pl/" target="_blank">http://nastrazysondazy.uw.edu.pl/</a>
+                                    <p>Students project for monitoring surveys quality  <a href="http://nastrazysondazy.uw.edu.pl/" target="_blank">see online</a><br/>
+                                    <strong>Code:</strong> [HTML, CSS, JS, Wordpress, PHP],
+                                    <strong>Design:</strong> [Photoshop, Illustrator]
+                                    </p>
                                 </article>
                             </section>
                         </li>
-                        <li><div class="exp-date"><span class="exp-year">2012</span><span class="exp-circle"></span><span class="exp-month">February - September</span></div>
+                        <li><div class="exp-date"><span class="exp-year">2012</span><span class="exp-circle"></span></div>
                             <section class="exp-desc">
                                 <hgroup>
                                     <h1>Warsztaty Analiz Socjologicznych</h1>
                                 </hgroup>
                                 <article>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus scelerisque sapien, vel molestie sem. Curabitur interdum ornare lorem. Proin convallis purus ac enim eleifend faucibus.
+                                    <p>Students sociological association  <a href="http://test.was.is.uw.edu.pl/" target="_blank">see online</a><br/>
+                                    <strong>Code:</strong> [HTML, CSS, JS, Wordpress, PHP],
+                                    <strong>Design:</strong> [Photoshop, Illustrator]
+                                    </p>
+                                    <p>March as career's month (students project) <a href="http://warsztaty.org/marzec-kariera/" target="_blank">see online</a><br/>
+                                    <strong>Code:</strong> [HTML, CSS, JS, Wordpress, PHP],
+                                    <strong>Design:</strong> [Photoshop, Illustrator]
+                                    </p>
                                 </article>
                             </section>
                         </li>
@@ -141,7 +162,7 @@
                         <div class="chart" data-percent="60"></div>
                         <div class="skill-label">
                             <div class="skill-flip">
-                                <div class="skill-level">Good</div>
+                                <div class="skill-level">Average</div>
                                 <div class="skill-desc">Javascript</div>
                             </div>
                         </div>
@@ -232,7 +253,7 @@
                         <div class="chart" data-percent="60"></div>
                         <div class="skill-label">
                             <div class="skill-flip">
-                                <div class="skill-level">Good</div>
+                                <div class="skill-level">Average</div>
                                 <div class="skill-desc">inDesign</div>
                             </div>
                         </div>
