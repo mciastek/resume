@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// fadeIn animation onLoad
 	$('#fade-wrap').fadeIn(800);
 	
-
+	// TAB CONTENT SIZE
 	// full window tab
 	var fullWindow = function(width, height) {
 		this.width = $('.tab-wrap').css('width', width);
@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	var tabWrap = new fullWindow(windowWidth, windowHeight);
 
-
+	// NAVIGATION
 	// simple scrollTo function
 	function scrollTo(href) {
 		$('html, body').animate({
@@ -25,13 +25,14 @@ $(document).ready(function() {
 	}
 
 	// navigation scrollTo
-	$('.dot-item a').click(function(e) {
+	$('.dot-item').click(function(e) {
 		e.preventDefault();
 
 		scrollTo($(this).attr('href'));
 
 	});
 
+	// WINDOW & TAB POSITION
 	var $tabWrap = $('.tab-wrap');
 	var tabOffsetTop = [];
 	var tabOffsetBottom = [];
@@ -48,6 +49,7 @@ $(document).ready(function() {
 	}
 	addTabCoords();
 
+	// SCROLL EVENT
 	var timer;
 	// window scroll event
 	$(window).scroll(function(event) {
@@ -104,7 +106,7 @@ $(document).ready(function() {
 	});
 
 	
-
+	// KEY NAVIGATION
 	// add .tab-wrap ids to array
 	var tabWrapIds = [];
 		for(var i=0; i < $tabWrap.length; i++) {
@@ -131,6 +133,7 @@ $(document).ready(function() {
 				}
 			scrollTo('#'+tabWrapIds[move]);
 			
+			
 		}
 
 		if(code == 40) {
@@ -144,8 +147,14 @@ $(document).ready(function() {
 			scrollTo('#'+tabWrapIds[move]);
 			
 		}
+
+		// if user push key hide key-nav info
+		if(code == 40 || code == 38) {
+			$('#key-nav-wrap').fadeOut(200);
+		}
 	});
 
+	// EXPERIENCE LIST
 	function showExpList() {
 	// experience list fade in
 	$('#exp-list li').each(function(index){
@@ -153,6 +162,7 @@ $(document).ready(function() {
 	});
 	}
 
+	// SKILL CHART INIT
 	function chartInit() {
     //create instance
 	    $('.chart').easyPieChart({
