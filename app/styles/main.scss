@@ -26,10 +26,26 @@ a {
 
 body {
     background: #f9f9f9;
-    font: 16px/1.65em "Lato", sans-serif;
+    font: 16px/1.65em "Lato", Arial, sans-serif;
     font-weight: normal;
     color: $dGray;
     position: relative;
+}
+
+#fade-wrap {
+  display: none;
+}
+
+// no network
+#no-network {
+    text-align: center;
+    p a {
+      color: $redOrange;
+      text-decoration: underline;
+      &:hover {
+        color: $brownOrange;
+      }
+    }
 }
 
 // navigation

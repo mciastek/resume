@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+	// fadeIn animation onLoad
+	$('#fade-wrap').fadeIn(800);
 	
 
 	// full window tab
